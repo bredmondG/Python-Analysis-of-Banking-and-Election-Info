@@ -26,8 +26,18 @@ def winner():
         if val == value:
             return(key, val)
 
+
+#prints to terminal
 print("Total Votes:", row_count)
 for key, val in candidates.items():
     print(key, ":", val, (round(val / row_count * 100)), "%")
 print("Winner:", winner())
+
+
+#writes to text file
+with open("pypolloutput.txt", "w") as f:
+    print("Total Votes:", row_count, file =f)
+    for key, val in candidates.items():
+        print(key, ":", val, (round(val / row_count * 100)), "%", file =f)
+    print("Winner:", winner(), file =f)
 
