@@ -42,9 +42,20 @@ with open("/Users/brendangold/DENVDEN201905DATA4/Homework/3 Python  6-18/PyBank/
 
     profit_decrease = (list(numbered_changes.keys())[list(numbered_changes.values()).index(min(changes))]) + 1
 
+
+    print("FINANCIAL ANALYSIS")
     print(f"Total Months: {row_count}")
     print(f"Total: ${sum(net_total)}")
     print(f"Average Change: ${average_changes}")
     print(f"Greatest Increase in profits {numbered_months.get(profit_increase)}, ${numbered_changes.get(profit_increase -1)}")
     print(f"Greatest Decrease in Profits {numbered_months.get(profit_decrease)}, ${numbered_changes.get(profit_decrease-1)}")
+
+    with open("PyBank_output.txt", "w") as f:
+        print("FINANCIAL ANALYSIS", file =f)
+        print(f"Total Months: {row_count}", file =f)
+        print(f"Total: ${sum(net_total)}", file =f)
+        print(f"Average Change: ${average_changes}", file =f)
+        print(f"Greatest Increase in profits {numbered_months.get(profit_increase)}, ${numbered_changes.get(profit_increase -1)}", file =f)
+        print(f"Greatest Decrease in Profits {numbered_months.get(profit_decrease)}, ${numbered_changes.get(profit_decrease-1)}", file =f)
+
   
