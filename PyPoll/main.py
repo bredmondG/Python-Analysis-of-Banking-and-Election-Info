@@ -1,6 +1,5 @@
 import csv
 
-#from tqdm import tqdm
 
 row_count = 0
 candidates = {}
@@ -11,7 +10,7 @@ def candidate_count(row):
     else:
         candidates[row[2]] += 1
 
-with open("/Users/brendangold/DENVDEN201905DATA4/Homework/3 Python  6-18/PyPoll/Resources/election_data.csv", "r") as f:
+with open("election_data.csv", "r") as f:
     reader = csv.reader(f)
     
     next(reader)

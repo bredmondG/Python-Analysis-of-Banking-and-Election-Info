@@ -8,7 +8,7 @@ months = []
 numbers = list(range(1,87))
 changes = []
 
-with open("/Users/brendangold/DENVDEN201905DATA4/Homework/3 Python  6-18/PyBank/Resources/budget_data.csv", "r") as f:
+with open("budget_data.csv", "r") as f:
     reader = csv.reader(f)
 
     next (reader)
