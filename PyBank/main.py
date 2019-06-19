@@ -1,5 +1,6 @@
 import csv
 import os
+from collections import Counter
 
 row_count = 0
 net_total = []
